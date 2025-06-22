@@ -23,4 +23,8 @@ def paykassa_handler():
         return "OK"
     return "FAIL"
 
+@app.route("/", methods=["GET"])
+def index():
+    return "Paykassa Webhook is running"
+
 app.run(host="0.0.0.0", port=5000)
